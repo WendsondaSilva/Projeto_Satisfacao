@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/usercss/normalize.css">
+    <link rel="stylesheet" href="../assets/css/usercss/style.css">
+    <link rel="icon" type="image/ico" href="../assets/img/ico.ico"/>
+    <title>SATISCULTURA</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #0b84c4;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            margin: 10px;
+            border: #95e1ff 2px solid;
+            border-radius: 15px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        a {
+            width: 110px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        label,
+        .question {
+            font-size: 28px;
+        }
+
+        .img-logo {
+            min-width: 17px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botão para ler em voz alta -->
+    <button class="leitura-voz-alta" id="speak">Leitura em voz alta</button>
+
+    <div id="conteudo-lido">
+        <div class="container-fluid">
+            <section class="section-logo">
+                <img class="img-logo" src="../assets/img/logo-senai.png" alt="Logo do Senai">
+            </section>
+            <section class="section-text">
+                <h1 class="title">PESQUISA DE SATISFAÇÃO</h1>
+                <p class="paragraph"></p>
+                <h2 class="question">COMO VOCÊ AVALIA O ATENDIMENTO?</h2>
+            </section>
+            <section class="section-button">
+                <label>
+                    <a class="pessimo" data-score="1" href="index-agradecimento.html">
+                        <img alt="1" src="../assets/img/pessimo.png">
+                    </a>
+                    Péssimo
+                </label>
+                <label>
+                    <a class="ruim" data-score="2" href="index-agradecimento.html">
+                        <img alt="1" src="../assets/img/ruim.png">
+                    </a>
+                    Ruim
+                </label>
+                <label>
+                    <a class="regular" data-score="3" href="index-agradecimento.html">
+                        <img alt="1" src="../assets/img/neutro.png">
+                    </a>
+                    Regular
+                </label>
+                <label>
+                    <a class="bom" data-score="4" href="index-agradecimento.html">
+                        <img alt="1" src="../assets/img/bom.png">
+                    </a>
+                    Bom
+                </label>
+                <label>
+                    <a class="excelente" data-score="5" href="index-agradecimento.html">
+                        <img alt="1" src="../assets/img/excelente.png">
+                    </a>
+                    Excelente
+                </label>
+            </section>
+        </div>
+    </div>
+    <!-- Script do text-speech -->
+    <script src="../assets/js/avaliacao/audioAvaliacao.js"></script>
+    <script src="../assets/js/avaliacao/fetchAvaliacao.js"></script>
+</body>
+
+</html>
